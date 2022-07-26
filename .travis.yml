@@ -7,6 +7,16 @@ services:
 
 before_install:
   - docker build -t hayeonkimm/docker-team -f ./Dockerfile
+
+branches:
+  only:
+    - hayeon
+notifications: # 성공 실패 여부 알림 
+  email:
+    recipients:
+      - hayeon.data@gmail.com
+
+
 script:
   - docker run -e CI=true hayeonkimm/docker-team npm ru ntest
 
