@@ -4,7 +4,7 @@ const http = require('http');
 const server = http.createServer(app);
 const connect = require('./src/model/db');
 const morgan = require('morgan');
-//보안
+//보안.
 const cors = require('cors');
 const helmet = require('helmet');
 //라우터
